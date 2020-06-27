@@ -32,26 +32,29 @@ public class Farm {
         System.out.println("we have now "+animalList.size()+ " animals");
     }
 
-    int countAnimal(char sex) {
-        int countHorse=0,countPig=0,countSheep=0;
+    public int countAnimal(Species species,char sex) {
+        int count=0;
         for(int i=0; i < animalList.size(); i++) {
             if( animalList.get(i).sex == sex) {
-                if(animalList.get(i).species == Animal.Species.Horse) {
-                    countHorse++;
-                }
-                if(animalList.get(i).species == Animal.Species.Pig) {
-                    countPig++;
-                }
-                if(animalList.get(i).species == Animal.Species.Sheep) {
-                    countSheep++;
+                if(animalList.get(i).species  == species && animalList.get(i).sex == sex) {
+                    count++;
                 }
             }
         }
+        System.out.println("we have "+count+ " "+species+" ["+sex+"]");
+        return count;
+    }
+
+    public int browseAnimal(Species species, int age) {
         return 1;
     }
 
-    public void browseAnimal(Species species, int age) {
+    public int browseAnimal(Species species) {
+        return 1;
+    }
 
+    public int browseAnimal(int age) {
+        return 1;
     }
 
     private void searchAnimal(AnimalComparator ac){

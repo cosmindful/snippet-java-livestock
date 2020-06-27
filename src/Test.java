@@ -9,5 +9,7 @@ public class Test {
 
         farm.killAnimal(Animal.Species.Pig,3,'m');
 
+        farm.countAnimal(Animal.Species.Horse,'f');
+
     }
 }
